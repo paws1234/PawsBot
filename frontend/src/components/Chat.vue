@@ -38,7 +38,7 @@ export default {
       this.$nextTick(() => this.scrollToBottom());
 
       try {
-        const response = await axios.post("https://psychic-couscous-qw4x67v4gx4fx77x-5000.app.github.dev/api/chat", { message: userMessage });
+        const response = await axios.post("https://pawsbot.onrender.com/api/chat", { message: userMessage });
         this.messages.push({ text: this.formatText(response.data.reply), sender: "bot" });
       } catch (error) {
         this.messages.push({ text: "<span style='color: red;'>Error connecting to chatbot.</span>", sender: "bot" });
